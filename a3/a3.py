@@ -187,7 +187,7 @@ def read_board(board_file):
     one row of the board per line. Newlines are not included in the board.
     """
     board_file = open('board1.txt','r')
-    while line in board_file != '':
+    for line in board_file:
         board_contents = board_file.read()
         return board_contents.rstrip('\n')
     board_file.close()
