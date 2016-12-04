@@ -187,11 +187,7 @@ def read_board(board_file):
     one row of the board per line. Newlines are not included in the board.
     """
     board_file = open('board1.txt','r')
-    for line in board_file:
+    while line in board_file != '':
         board_contents = board_file.read()
         return board_contents.rstrip('\n')
-    board_file.close()
-
-    board_file = askopenfile(mode='r', title='Select board file')
-    board = a3.read_board(board_file)
     board_file.close()
